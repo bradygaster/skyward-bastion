@@ -2,9 +2,6 @@
 // Contract: docs/contract.md §6/§7. Reads state, never mutates it; writes to the
 // DOM only when a value changes; attaches no event listeners.
 
-const TAGLINE = 'Hold the line. Six cities. Three batteries. One sky.';
-const CONTROLS_HINT = 'Click to fire · 1/2/3 select · A/S/D fire from battery · P pause · M sound';
-
 const OVERLAY_FOR_PHASE = {
   title: 'overlay-title',
   paused: 'overlay-paused',
@@ -52,9 +49,6 @@ export function createHud(root = document) {
     if (!el) return;
     if (changed(`a:${id}:${name}`, value)) el.setAttribute(name, value);
   }
-
-  // One-time title-card copy (index.html has no ids for these; see report).
-  installTitleCopy(get('overlay-title'), root);
 
   function update(state) {
     if (!state) return;
@@ -120,22 +114,4 @@ export function createHud(root = document) {
   }
 
   return { update };
-}
-
-// Sets the title tagline and adds a compact controls hint inside the title card.
-// Purely cosmetic and idempotent; silently does nothing if the markup differs.
-function installTitleCopy(overlay, root) {
-  if (!overlay || typeof overlay.querySelector !== 'function') return;
-  const card = overlay.querySelector('.overlay-card') || overlay;
-  const tagline = card.querySelector('p.overlay-tagline') || card.querySelector('p:not([class]):not([id])');
-  if (tagline) {
-    tagline.classList.add('overlay-tagline');
-    if (tagline.textContent !== TAGLINE && !tagline.querySelector('[id]')) tagline.textContent = TAGLINE;
-  }
-  if (!card.querySelector('.overlay-hint') && root && typeof root.createElement === 'function') {
-    const hint = root.createElement('p');
-    hint.className = 'overlay-hint';
-    hint.textContent = CONTROLS_HINT;
-    card.appendChild(hint);
-  }
 }
