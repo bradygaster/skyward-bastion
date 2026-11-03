@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "squad_state": {
+      "command": "/opt/homebrew/Caskroom/squad/2.0.0-preview.3/squad-darwin-arm64/squad",
+      "args": [
+        "state-mcp"
+      ],
+      "env": {},
+      "tools": [
+        "*"
+      ],
+      "x-squad": {
+        "managed": true,
+        "version": "2.0.0-preview.3",
+        "machineSpecific": true,
+        "source": "standalone",
+        "fallback": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@bradygaster/squad-cli@2.0.0-preview.3",
+            "state-mcp"
+          ]
+        }
+      }
+    }
+  }
+}
