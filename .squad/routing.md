@@ -6,6 +6,12 @@ How to decide who handles what.
 
 | Work Type | Route To | Examples |
 |-----------|----------|----------|
+| Contract, architecture, bootstrap, config constants | Kranz | `docs/contract.md`, `index.html`, `src/main.js`, `src/config.js` |
+| Rules, waves, entities, collisions, scoring, high score | Lovell | `src/game.js`, `src/entities.js`, `src/waves.js`, `src/score.js` |
+| Canvas drawing, CSS, HUD, overlays, visual identity | Haise | `styles.css`, `src/render.js`, `src/hud.js` |
+| Keyboard/mouse input, Web Audio, mute toggle | Swigert | `src/input.js`, `src/audio.js` |
+| Review gate, QA, README | Mattingly | `README.md`, `docs/review.md` |
+| Decision merging | Scribe | `.squad/decisions.md` |
 
 Preset installation adds concrete routes for the configured team. Add or edit rows
 here only when their agent names also exist in the casting registry.
@@ -33,3 +39,13 @@ here only when their agent names also exist in the casting registry.
 5. **"Team, ..." → fan-out.** Spawn all relevant agents in parallel as `mode: "background"`.
 6. **Anticipate downstream work.** If a feature is being built, spawn the tester to write test cases from requirements simultaneously.
 7. **Issue-labeled work** — when a `squad:{member}` label is applied to an issue, route to that member. The Lead handles all `squad` (base label) triage.
+
+## Work Type → Agent
+
+| Work Type | Primary | Secondary |
+|-----------|---------|----------|
+| Lead / Architect | Kranz | — |
+| Gameplay / Engine Engineer | Lovell | — |
+| Rendering / UI-Style Engineer | Haise | — |
+| Input & Audio Engineer | Swigert | — |
+| Tester / Reviewer | Mattingly | — |

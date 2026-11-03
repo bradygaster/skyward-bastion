@@ -1,8 +1,54 @@
 {
   "schema": "squad-agent-provenance/v1",
   "schema_version": 1,
-  "revision": 1,
-  "generated_at": "1970-01-01T00:00:00.000Z",
-  "agents": {},
-  "transaction_id": "1296bca2-8f5f-40a6-ae2a-89096f8be632"
+  "revision": 6,
+  "generated_at": "2026-11-03T22:13:37.314Z",
+  "agents": {
+    "kranz": {
+      "display_name": "Kranz",
+      "persistent_name": "Kranz",
+      "role": "Lead / Architect",
+      "universe": "cli-cast",
+      "status": "active",
+      "created_at": "2026-11-03T22:13:36.495Z",
+      "updated_at": "2026-11-03T22:13:36.495Z"
+    },
+    "lovell": {
+      "display_name": "Lovell",
+      "persistent_name": "Lovell",
+      "role": "Gameplay / Engine Engineer",
+      "universe": "cli-cast",
+      "status": "active",
+      "created_at": "2026-11-03T22:13:36.698Z",
+      "updated_at": "2026-11-03T22:13:36.698Z"
+    },
+    "haise": {
+      "display_name": "Haise",
+      "persistent_name": "Haise",
+      "role": "Rendering / UI-Style Engineer",
+      "universe": "cli-cast",
+      "status": "active",
+      "created_at": "2026-11-03T22:13:36.888Z",
+      "updated_at": "2026-11-03T22:13:36.888Z"
+    },
+    "swigert": {
+      "display_name": "Swigert",
+      "persistent_name": "Swigert",
+      "role": "Input & Audio Engineer",
+      "universe": "cli-cast",
+      "status": "active",
+      "created_at": "2026-11-03T22:13:37.098Z",
+      "updated_at": "2026-11-03T22:13:37.098Z"
+    },
+    "mattingly": {
+      "display_name": "Mattingly",
+      "persistent_name": "Mattingly",
+      "role": "Tester / Reviewer",
+      "universe": "cli-cast",
+      "status": "active",
+      "created_at": "2026-11-03T22:13:37.314Z",
+      "updated_at": "2026-11-03T22:13:37.314Z"
+    }
+  },
+  "transaction_id": "53e563c9-3870-4631-816f-0b65b7b0e610"
 }
