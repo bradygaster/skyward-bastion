@@ -2,6 +2,16 @@
 
 **Hold the line. Six cities. Three batteries. One sky.**
 
+![SKYWARD BASTION gameplay: interceptors and chaining flak bursts over six teal cities](docs/media/gameplay.gif)
+
+> **A first:** SKYWARD BASTION is the first game ever built using
+> [Squad](https://github.com/bradygaster/squad) and Claude. A Squad team of Claude agents
+> (cast from the Apollo 13 mission-control crew) planned, built and reviewed it:
+> **Kranz** (Lead) wrote the module contract in [`docs/contract.md`](docs/contract.md);
+> **Lovell** (gameplay), **Haise** (rendering and style) and **Swigert** (input and audio)
+> built against it in parallel; **Mattingly** (Tester) ran the review gate in
+> [`docs/review.md`](docs/review.md); and **Scribe** merged the team's decisions.
+
 SKYWARD BASTION is an original missile-defense arcade game for the browser. Warheads
 fall on six cities; you defend them from three ground batteries by launching
 interceptors that burst into expanding flak clouds. Bursts grow, hold, shrink, and
@@ -94,4 +104,5 @@ src/input.js      pointer and keyboard input
 src/audio.js      synthesized Web Audio sound effects
 docs/contract.md  module interface contract
 docs/review.md    review gate results
+docs/media/       README gameplay GIF
 ```
