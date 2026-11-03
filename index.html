@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKYWARD BASTION</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <h1 class="brand">SKYWARD BASTION</h1>
+      <dl class="hud-stats">
+        <div class="stat"><dt>Score</dt><dd id="hud-score">0</dd></div>
+        <div class="stat"><dt>High</dt><dd id="hud-high">0</dd></div>
+        <div class="stat"><dt>Wave</dt><dd id="hud-wave">0</dd></div>
+        <div class="stat"><dt>Mult</dt><dd id="hud-mult">1x</dd></div>
+        <div class="stat"><dt>Cities</dt><dd id="hud-cities">6</dd></div>
+      </dl>
+      <div id="batteries" aria-label="Batteries">
+        <div id="battery-0" class="battery-panel" data-index="0">
+          <span class="battery-label">L &middot; 1/A</span>
+          <span id="battery-0-ammo" class="battery-ammo">10</span>
+        </div>
+        <div id="battery-1" class="battery-panel is-selected" data-index="1">
+          <span class="battery-label">C &middot; 2/S</span>
+          <span id="battery-1-ammo" class="battery-ammo">10</span>
+        </div>
+        <div id="battery-2" class="battery-panel" data-index="2">
+          <span class="battery-label">R &middot; 3/D</span>
+          <span id="battery-2-ammo" class="battery-ammo">10</span>
+        </div>
+      </div>
+      <button id="mute-btn" type="button" aria-pressed="true" data-muted="true" title="Toggle sound (M)">SOUND: OFF</button>
+    </header>
+
+    <main id="stage">
+      <canvas id="game-canvas" aria-label="Game field"></canvas>
+
+      <div id="wave-banner" hidden></div>
+
+      <section id="overlay-title" class="overlay">
+        <div class="overlay-card">
+          <h2>SKYWARD BASTION</h2>
+          <p>Hold the line. Burst the warheads before they reach your cities.</p>
+          <p class="overlay-cta">Click or press Enter to begin</p>
+          <p>High score: <span id="title-high">0</span></p>
+        </div>
+      </section>
+
+      <section id="overlay-paused" class="overlay" hidden>
+        <div class="overlay-card">
+          <h2>PAUSED</h2>
+          <p class="overlay-cta">Press P or Esc to resume</p>
+        </div>
+      </section>
+
+      <section id="overlay-waveend" class="overlay" hidden>
+        <div class="overlay-card">
+          <h2>WAVE <span id="tally-wave">0</span> HELD</h2>
+          <p>Multiplier <span id="tally-mult">1x</span></p>
+          <table class="tally">
+            <tr><th>Ammo left</th><td id="tally-ammo">0 / 0</td><td id="tally-ammo-points">0</td></tr>
+            <tr><th>Cities standing</th><td id="tally-cities">0 / 0</td><td id="tally-city-points">0</td></tr>
+            <tr class="tally-total-row"><th>Bonus</th><td></td><td id="tally-total">0</td></tr>
+          </table>
+          <p id="tally-bonus-city" hidden></p>
+          <p class="overlay-cta">Click or press Enter to skip</p>
+        </div>
+      </section>
+
+      <section id="overlay-gameover" class="overlay" hidden>
+        <div class="overlay-card">
+          <h2>BASTION FALLEN</h2>
+          <p>Score <span id="final-score">0</span></p>
+          <p>High <span id="final-high">0</span></p>
+          <p>Reached wave <span id="final-wave">0</span></p>
+          <p id="new-high" hidden>NEW HIGH SCORE</p>
+          <p class="overlay-cta">Click, Enter or R to play again</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="help">
+      <span><kbd>Click</kbd> fire from selected battery</span>
+      <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> select battery</span>
+      <span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> fire from battery at pointer</span>
+      <span><kbd>P</kbd>/<kbd>Esc</kbd> pause</span>
+      <span><kbd>R</kbd> restart</span>
+      <span><kbd>M</kbd> sound</span>
+    </footer>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
