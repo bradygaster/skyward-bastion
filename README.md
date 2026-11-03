@@ -12,7 +12,7 @@
 > built against it in parallel; **Mattingly** (Tester) ran the review gate in
 > [`docs/review.md`](docs/review.md); and **Scribe** merged the team's decisions.
 
-SKYWARD BASTION is an original missile-defense arcade game for the browser. Warheads
+SKYWARD BASTION is a browser missile-defense arcade game, a homage to Atari's 1980 classic *Missile Command*. Warheads
 fall on six cities; you defend them from three ground batteries by launching
 interceptors that burst into expanding flak clouds. Bursts grow, hold, shrink, and
 chain: anything caught in one detonates into a new burst of its own.
